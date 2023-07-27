@@ -1,45 +1,35 @@
-<html>
-    <head>
-       <title>Mi Aplicación de Selfies</title>
- <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro p5.js</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-<link href="style.css" rel="stylesheet">
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
- 
+h3 {
+    font-size: 25px important;
+}
+
+canvas {
+    border: 1px solid black;
+}
+</style>
+</head>
 <body>
-    <div class="container">
-    <center>
-        <a href="" id="link" download="myselfie.png"></a>
-        <h1>Aplicación de voz para tomar selfies
-            <img id="logo_img" src="selfie.jpeg">
-        </h1>
-        <hr>
-        <h4 style="color:rgb(105, 7, 128);">Haz clic en permitir cuando aparezca la ventana emergente, después de dar una orden de voz.</h4>
-        
-        <div class="form-group">
-            <h3>Di "toma mi selfie"</h3>
-            <label>Tu salida de voz: </label>
-            <textarea class="form-control" id="textbox" readonly="true"></textarea>
-        </div>
-        <button class="btn btn-primary" onclick="start()">Iniciar</button>
-        <p>Haz clic en el botón Iniciar</p>
-
-        <label>Tu cámara: </label>
-        <div id="camera"></div>
-
-        <br>
-
-        <label>Tu selfie aparecerá aquí: </label>
-        <div id="result" ></div>
-    </center>
+    <div class="container"></div>
+    <h3 class="btn btn-primary">Introduccion a p5.js</h3>
+    <hr>
+    <input type="text" id="color" placeholder="Escribe el color del filtro">
+    <button onclick="filter_tint()" class="btn btn-waring">Aplicar filtro</button>
+    <button onclick="take_snapshot()" class="btn btn-sucess">Tomar captura</button>
     </div>
-
     <script src="main.js"></script>
+    
 </body>
+
 </html>
